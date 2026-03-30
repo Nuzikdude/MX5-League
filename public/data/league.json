@@ -1,0 +1,37 @@
+{
+  "name": "PMR MX-5 League",
+  "rules": [
+    {
+      "label": "Qualifying",
+      "value": "3 laps"
+    },
+    {
+      "label": "1st place",
+      "value": "10.0"
+    },
+    {
+      "label": "2nd place",
+      "value": "7.0"
+    },
+    {
+      "label": "3rd place",
+      "value": "5.0"
+    },
+    {
+      "label": "4th place",
+      "value": "3.0"
+    },
+    {
+      "label": "5th place",
+      "value": "2.0"
+    },
+    {
+      "label": "6th place",
+      "value": "1.0"
+    },
+    {
+      "label": "Fastest lap bonus",
+      "value": "2.0"
+    }
+  ]
+}

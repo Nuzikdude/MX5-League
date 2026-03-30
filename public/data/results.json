@@ -1,0 +1,1082 @@
+[
+  {
+    "track": "Lime Rock",
+    "trackSlug": "lime-rock",
+    "position": 1,
+    "driver": "",
+    "racePoints": 10,
+    "fastestLap": false,
+    "totalPoints": 10,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Lime Rock",
+    "trackSlug": "lime-rock",
+    "position": 2,
+    "driver": "",
+    "racePoints": 7,
+    "fastestLap": false,
+    "totalPoints": 7,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Lime Rock",
+    "trackSlug": "lime-rock",
+    "position": 3,
+    "driver": "",
+    "racePoints": 5,
+    "fastestLap": false,
+    "totalPoints": 5,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Lime Rock",
+    "trackSlug": "lime-rock",
+    "position": 4,
+    "driver": "",
+    "racePoints": 3,
+    "fastestLap": false,
+    "totalPoints": 3,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Lime Rock",
+    "trackSlug": "lime-rock",
+    "position": 5,
+    "driver": "",
+    "racePoints": 2,
+    "fastestLap": false,
+    "totalPoints": 2,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Lime Rock",
+    "trackSlug": "lime-rock",
+    "position": 6,
+    "driver": "",
+    "racePoints": 1,
+    "fastestLap": false,
+    "totalPoints": 1,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Zolder",
+    "trackSlug": "zolder",
+    "position": 1,
+    "driver": "",
+    "racePoints": 10,
+    "fastestLap": false,
+    "totalPoints": 10,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Zolder",
+    "trackSlug": "zolder",
+    "position": 2,
+    "driver": "",
+    "racePoints": 7,
+    "fastestLap": false,
+    "totalPoints": 7,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Zolder",
+    "trackSlug": "zolder",
+    "position": 3,
+    "driver": "",
+    "racePoints": 5,
+    "fastestLap": false,
+    "totalPoints": 5,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Zolder",
+    "trackSlug": "zolder",
+    "position": 4,
+    "driver": "",
+    "racePoints": 3,
+    "fastestLap": false,
+    "totalPoints": 3,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Zolder",
+    "trackSlug": "zolder",
+    "position": 5,
+    "driver": "",
+    "racePoints": 2,
+    "fastestLap": false,
+    "totalPoints": 2,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Zolder",
+    "trackSlug": "zolder",
+    "position": 6,
+    "driver": "",
+    "racePoints": 1,
+    "fastestLap": false,
+    "totalPoints": 1,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Donington Park",
+    "trackSlug": "donington-park",
+    "position": 1,
+    "driver": "",
+    "racePoints": 10,
+    "fastestLap": false,
+    "totalPoints": 10,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Donington Park",
+    "trackSlug": "donington-park",
+    "position": 2,
+    "driver": "",
+    "racePoints": 7,
+    "fastestLap": false,
+    "totalPoints": 7,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Donington Park",
+    "trackSlug": "donington-park",
+    "position": 3,
+    "driver": "",
+    "racePoints": 5,
+    "fastestLap": false,
+    "totalPoints": 5,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Donington Park",
+    "trackSlug": "donington-park",
+    "position": 4,
+    "driver": "",
+    "racePoints": 3,
+    "fastestLap": false,
+    "totalPoints": 3,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Donington Park",
+    "trackSlug": "donington-park",
+    "position": 5,
+    "driver": "",
+    "racePoints": 2,
+    "fastestLap": false,
+    "totalPoints": 2,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Donington Park",
+    "trackSlug": "donington-park",
+    "position": 6,
+    "driver": "",
+    "racePoints": 1,
+    "fastestLap": false,
+    "totalPoints": 1,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Mid-Ohio",
+    "trackSlug": "mid-ohio",
+    "position": 1,
+    "driver": "",
+    "racePoints": 10,
+    "fastestLap": false,
+    "totalPoints": 10,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Mid-Ohio",
+    "trackSlug": "mid-ohio",
+    "position": 2,
+    "driver": "",
+    "racePoints": 7,
+    "fastestLap": false,
+    "totalPoints": 7,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Mid-Ohio",
+    "trackSlug": "mid-ohio",
+    "position": 3,
+    "driver": "",
+    "racePoints": 5,
+    "fastestLap": false,
+    "totalPoints": 5,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Mid-Ohio",
+    "trackSlug": "mid-ohio",
+    "position": 4,
+    "driver": "",
+    "racePoints": 3,
+    "fastestLap": false,
+    "totalPoints": 3,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Mid-Ohio",
+    "trackSlug": "mid-ohio",
+    "position": 5,
+    "driver": "",
+    "racePoints": 2,
+    "fastestLap": false,
+    "totalPoints": 2,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Mid-Ohio",
+    "trackSlug": "mid-ohio",
+    "position": 6,
+    "driver": "",
+    "racePoints": 1,
+    "fastestLap": false,
+    "totalPoints": 1,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Interlagos",
+    "trackSlug": "interlagos",
+    "position": 1,
+    "driver": "",
+    "racePoints": 10,
+    "fastestLap": false,
+    "totalPoints": 10,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Interlagos",
+    "trackSlug": "interlagos",
+    "position": 2,
+    "driver": "",
+    "racePoints": 7,
+    "fastestLap": false,
+    "totalPoints": 7,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Interlagos",
+    "trackSlug": "interlagos",
+    "position": 3,
+    "driver": "",
+    "racePoints": 5,
+    "fastestLap": false,
+    "totalPoints": 5,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Interlagos",
+    "trackSlug": "interlagos",
+    "position": 4,
+    "driver": "",
+    "racePoints": 3,
+    "fastestLap": false,
+    "totalPoints": 3,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Interlagos",
+    "trackSlug": "interlagos",
+    "position": 5,
+    "driver": "",
+    "racePoints": 2,
+    "fastestLap": false,
+    "totalPoints": 2,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Interlagos",
+    "trackSlug": "interlagos",
+    "position": 6,
+    "driver": "",
+    "racePoints": 1,
+    "fastestLap": false,
+    "totalPoints": 1,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Red Bull Ring",
+    "trackSlug": "red-bull-ring",
+    "position": 1,
+    "driver": "",
+    "racePoints": 10,
+    "fastestLap": false,
+    "totalPoints": 10,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Red Bull Ring",
+    "trackSlug": "red-bull-ring",
+    "position": 2,
+    "driver": "",
+    "racePoints": 7,
+    "fastestLap": false,
+    "totalPoints": 7,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Red Bull Ring",
+    "trackSlug": "red-bull-ring",
+    "position": 3,
+    "driver": "",
+    "racePoints": 5,
+    "fastestLap": false,
+    "totalPoints": 5,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Red Bull Ring",
+    "trackSlug": "red-bull-ring",
+    "position": 4,
+    "driver": "",
+    "racePoints": 3,
+    "fastestLap": false,
+    "totalPoints": 3,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Red Bull Ring",
+    "trackSlug": "red-bull-ring",
+    "position": 5,
+    "driver": "",
+    "racePoints": 2,
+    "fastestLap": false,
+    "totalPoints": 2,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Red Bull Ring",
+    "trackSlug": "red-bull-ring",
+    "position": 6,
+    "driver": "",
+    "racePoints": 1,
+    "fastestLap": false,
+    "totalPoints": 1,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Mosport",
+    "trackSlug": "mosport",
+    "position": 1,
+    "driver": "",
+    "racePoints": 10,
+    "fastestLap": false,
+    "totalPoints": 10,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Mosport",
+    "trackSlug": "mosport",
+    "position": 2,
+    "driver": "",
+    "racePoints": 7,
+    "fastestLap": false,
+    "totalPoints": 7,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Mosport",
+    "trackSlug": "mosport",
+    "position": 3,
+    "driver": "",
+    "racePoints": 5,
+    "fastestLap": false,
+    "totalPoints": 5,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Mosport",
+    "trackSlug": "mosport",
+    "position": 4,
+    "driver": "",
+    "racePoints": 3,
+    "fastestLap": false,
+    "totalPoints": 3,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Mosport",
+    "trackSlug": "mosport",
+    "position": 5,
+    "driver": "",
+    "racePoints": 2,
+    "fastestLap": false,
+    "totalPoints": 2,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Mosport",
+    "trackSlug": "mosport",
+    "position": 6,
+    "driver": "",
+    "racePoints": 1,
+    "fastestLap": false,
+    "totalPoints": 1,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Kyalami",
+    "trackSlug": "kyalami",
+    "position": 1,
+    "driver": "",
+    "racePoints": 10,
+    "fastestLap": false,
+    "totalPoints": 10,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Kyalami",
+    "trackSlug": "kyalami",
+    "position": 2,
+    "driver": "",
+    "racePoints": 7,
+    "fastestLap": false,
+    "totalPoints": 7,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Kyalami",
+    "trackSlug": "kyalami",
+    "position": 3,
+    "driver": "",
+    "racePoints": 5,
+    "fastestLap": false,
+    "totalPoints": 5,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Kyalami",
+    "trackSlug": "kyalami",
+    "position": 4,
+    "driver": "",
+    "racePoints": 3,
+    "fastestLap": false,
+    "totalPoints": 3,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Kyalami",
+    "trackSlug": "kyalami",
+    "position": 5,
+    "driver": "",
+    "racePoints": 2,
+    "fastestLap": false,
+    "totalPoints": 2,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Kyalami",
+    "trackSlug": "kyalami",
+    "position": 6,
+    "driver": "",
+    "racePoints": 1,
+    "fastestLap": false,
+    "totalPoints": 1,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Imola",
+    "trackSlug": "imola",
+    "position": 1,
+    "driver": "",
+    "racePoints": 10,
+    "fastestLap": false,
+    "totalPoints": 10,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Imola",
+    "trackSlug": "imola",
+    "position": 2,
+    "driver": "",
+    "racePoints": 7,
+    "fastestLap": false,
+    "totalPoints": 7,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Imola",
+    "trackSlug": "imola",
+    "position": 3,
+    "driver": "",
+    "racePoints": 5,
+    "fastestLap": false,
+    "totalPoints": 5,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Imola",
+    "trackSlug": "imola",
+    "position": 4,
+    "driver": "",
+    "racePoints": 3,
+    "fastestLap": false,
+    "totalPoints": 3,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Imola",
+    "trackSlug": "imola",
+    "position": 5,
+    "driver": "",
+    "racePoints": 2,
+    "fastestLap": false,
+    "totalPoints": 2,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Imola",
+    "trackSlug": "imola",
+    "position": 6,
+    "driver": "",
+    "racePoints": 1,
+    "fastestLap": false,
+    "totalPoints": 1,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Silverstone",
+    "trackSlug": "silverstone",
+    "position": 1,
+    "driver": "",
+    "racePoints": 10,
+    "fastestLap": false,
+    "totalPoints": 10,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Silverstone",
+    "trackSlug": "silverstone",
+    "position": 2,
+    "driver": "",
+    "racePoints": 7,
+    "fastestLap": false,
+    "totalPoints": 7,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Silverstone",
+    "trackSlug": "silverstone",
+    "position": 3,
+    "driver": "",
+    "racePoints": 5,
+    "fastestLap": false,
+    "totalPoints": 5,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Silverstone",
+    "trackSlug": "silverstone",
+    "position": 4,
+    "driver": "",
+    "racePoints": 3,
+    "fastestLap": false,
+    "totalPoints": 3,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Silverstone",
+    "trackSlug": "silverstone",
+    "position": 5,
+    "driver": "",
+    "racePoints": 2,
+    "fastestLap": false,
+    "totalPoints": 2,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Silverstone",
+    "trackSlug": "silverstone",
+    "position": 6,
+    "driver": "",
+    "racePoints": 1,
+    "fastestLap": false,
+    "totalPoints": 1,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Sebring",
+    "trackSlug": "sebring",
+    "position": 1,
+    "driver": "",
+    "racePoints": 10,
+    "fastestLap": false,
+    "totalPoints": 10,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Sebring",
+    "trackSlug": "sebring",
+    "position": 2,
+    "driver": "",
+    "racePoints": 7,
+    "fastestLap": false,
+    "totalPoints": 7,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Sebring",
+    "trackSlug": "sebring",
+    "position": 3,
+    "driver": "",
+    "racePoints": 5,
+    "fastestLap": false,
+    "totalPoints": 5,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Sebring",
+    "trackSlug": "sebring",
+    "position": 4,
+    "driver": "",
+    "racePoints": 3,
+    "fastestLap": false,
+    "totalPoints": 3,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Sebring",
+    "trackSlug": "sebring",
+    "position": 5,
+    "driver": "",
+    "racePoints": 2,
+    "fastestLap": false,
+    "totalPoints": 2,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Sebring",
+    "trackSlug": "sebring",
+    "position": 6,
+    "driver": "",
+    "racePoints": 1,
+    "fastestLap": false,
+    "totalPoints": 1,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Daytona Road",
+    "trackSlug": "daytona-road",
+    "position": 1,
+    "driver": "",
+    "racePoints": 10,
+    "fastestLap": false,
+    "totalPoints": 10,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Daytona Road",
+    "trackSlug": "daytona-road",
+    "position": 2,
+    "driver": "",
+    "racePoints": 7,
+    "fastestLap": false,
+    "totalPoints": 7,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Daytona Road",
+    "trackSlug": "daytona-road",
+    "position": 3,
+    "driver": "",
+    "racePoints": 5,
+    "fastestLap": false,
+    "totalPoints": 5,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Daytona Road",
+    "trackSlug": "daytona-road",
+    "position": 4,
+    "driver": "",
+    "racePoints": 3,
+    "fastestLap": false,
+    "totalPoints": 3,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Daytona Road",
+    "trackSlug": "daytona-road",
+    "position": 5,
+    "driver": "",
+    "racePoints": 2,
+    "fastestLap": false,
+    "totalPoints": 2,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Daytona Road",
+    "trackSlug": "daytona-road",
+    "position": 6,
+    "driver": "",
+    "racePoints": 1,
+    "fastestLap": false,
+    "totalPoints": 1,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Monza",
+    "trackSlug": "monza",
+    "position": 1,
+    "driver": "",
+    "racePoints": 10,
+    "fastestLap": false,
+    "totalPoints": 10,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Monza",
+    "trackSlug": "monza",
+    "position": 2,
+    "driver": "",
+    "racePoints": 7,
+    "fastestLap": false,
+    "totalPoints": 7,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Monza",
+    "trackSlug": "monza",
+    "position": 3,
+    "driver": "",
+    "racePoints": 5,
+    "fastestLap": false,
+    "totalPoints": 5,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Monza",
+    "trackSlug": "monza",
+    "position": 4,
+    "driver": "",
+    "racePoints": 3,
+    "fastestLap": false,
+    "totalPoints": 3,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Monza",
+    "trackSlug": "monza",
+    "position": 5,
+    "driver": "",
+    "racePoints": 2,
+    "fastestLap": false,
+    "totalPoints": 2,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Monza",
+    "trackSlug": "monza",
+    "position": 6,
+    "driver": "",
+    "racePoints": 1,
+    "fastestLap": false,
+    "totalPoints": 1,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Nürburgring GP",
+    "trackSlug": "n-rburgring-gp",
+    "position": 1,
+    "driver": "",
+    "racePoints": 10,
+    "fastestLap": false,
+    "totalPoints": 10,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Nürburgring GP",
+    "trackSlug": "n-rburgring-gp",
+    "position": 2,
+    "driver": "",
+    "racePoints": 7,
+    "fastestLap": false,
+    "totalPoints": 7,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Nürburgring GP",
+    "trackSlug": "n-rburgring-gp",
+    "position": 3,
+    "driver": "",
+    "racePoints": 5,
+    "fastestLap": false,
+    "totalPoints": 5,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Nürburgring GP",
+    "trackSlug": "n-rburgring-gp",
+    "position": 4,
+    "driver": "",
+    "racePoints": 3,
+    "fastestLap": false,
+    "totalPoints": 3,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Nürburgring GP",
+    "trackSlug": "n-rburgring-gp",
+    "position": 5,
+    "driver": "",
+    "racePoints": 2,
+    "fastestLap": false,
+    "totalPoints": 2,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Nürburgring GP",
+    "trackSlug": "n-rburgring-gp",
+    "position": 6,
+    "driver": "",
+    "racePoints": 1,
+    "fastestLap": false,
+    "totalPoints": 1,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Spa",
+    "trackSlug": "spa",
+    "position": 1,
+    "driver": "",
+    "racePoints": 10,
+    "fastestLap": false,
+    "totalPoints": 10,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Spa",
+    "trackSlug": "spa",
+    "position": 2,
+    "driver": "",
+    "racePoints": 7,
+    "fastestLap": false,
+    "totalPoints": 7,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Spa",
+    "trackSlug": "spa",
+    "position": 3,
+    "driver": "",
+    "racePoints": 5,
+    "fastestLap": false,
+    "totalPoints": 5,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Spa",
+    "trackSlug": "spa",
+    "position": 4,
+    "driver": "",
+    "racePoints": 3,
+    "fastestLap": false,
+    "totalPoints": 3,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Spa",
+    "trackSlug": "spa",
+    "position": 5,
+    "driver": "",
+    "racePoints": 2,
+    "fastestLap": false,
+    "totalPoints": 2,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Spa",
+    "trackSlug": "spa",
+    "position": 6,
+    "driver": "",
+    "racePoints": 1,
+    "fastestLap": false,
+    "totalPoints": 1,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Bathurst",
+    "trackSlug": "bathurst",
+    "position": 1,
+    "driver": "",
+    "racePoints": 10,
+    "fastestLap": false,
+    "totalPoints": 10,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Bathurst",
+    "trackSlug": "bathurst",
+    "position": 2,
+    "driver": "",
+    "racePoints": 7,
+    "fastestLap": false,
+    "totalPoints": 7,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Bathurst",
+    "trackSlug": "bathurst",
+    "position": 3,
+    "driver": "",
+    "racePoints": 5,
+    "fastestLap": false,
+    "totalPoints": 5,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Bathurst",
+    "trackSlug": "bathurst",
+    "position": 4,
+    "driver": "",
+    "racePoints": 3,
+    "fastestLap": false,
+    "totalPoints": 3,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Bathurst",
+    "trackSlug": "bathurst",
+    "position": 5,
+    "driver": "",
+    "racePoints": 2,
+    "fastestLap": false,
+    "totalPoints": 2,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Bathurst",
+    "trackSlug": "bathurst",
+    "position": 6,
+    "driver": "",
+    "racePoints": 1,
+    "fastestLap": false,
+    "totalPoints": 1,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Nordschleife",
+    "trackSlug": "nordschleife",
+    "position": 1,
+    "driver": "",
+    "racePoints": 10,
+    "fastestLap": false,
+    "totalPoints": 10,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Nordschleife",
+    "trackSlug": "nordschleife",
+    "position": 2,
+    "driver": "",
+    "racePoints": 7,
+    "fastestLap": false,
+    "totalPoints": 7,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Nordschleife",
+    "trackSlug": "nordschleife",
+    "position": 3,
+    "driver": "",
+    "racePoints": 5,
+    "fastestLap": false,
+    "totalPoints": 5,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Nordschleife",
+    "trackSlug": "nordschleife",
+    "position": 4,
+    "driver": "",
+    "racePoints": 3,
+    "fastestLap": false,
+    "totalPoints": 3,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Nordschleife",
+    "trackSlug": "nordschleife",
+    "position": 5,
+    "driver": "",
+    "racePoints": 2,
+    "fastestLap": false,
+    "totalPoints": 2,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Nordschleife",
+    "trackSlug": "nordschleife",
+    "position": 6,
+    "driver": "",
+    "racePoints": 1,
+    "fastestLap": false,
+    "totalPoints": 1,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Takimiya",
+    "trackSlug": "takimiya",
+    "position": 1,
+    "driver": "",
+    "racePoints": 10,
+    "fastestLap": false,
+    "totalPoints": 10,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Takimiya",
+    "trackSlug": "takimiya",
+    "position": 2,
+    "driver": "",
+    "racePoints": 7,
+    "fastestLap": false,
+    "totalPoints": 7,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Takimiya",
+    "trackSlug": "takimiya",
+    "position": 3,
+    "driver": "",
+    "racePoints": 5,
+    "fastestLap": false,
+    "totalPoints": 5,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Takimiya",
+    "trackSlug": "takimiya",
+    "position": 4,
+    "driver": "",
+    "racePoints": 3,
+    "fastestLap": false,
+    "totalPoints": 3,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Takimiya",
+    "trackSlug": "takimiya",
+    "position": 5,
+    "driver": "",
+    "racePoints": 2,
+    "fastestLap": false,
+    "totalPoints": 2,
+    "bestLapTime": ""
+  },
+  {
+    "track": "Takimiya",
+    "trackSlug": "takimiya",
+    "position": 6,
+    "driver": "",
+    "racePoints": 1,
+    "fastestLap": false,
+    "totalPoints": 1,
+    "bestLapTime": ""
+  }
+]

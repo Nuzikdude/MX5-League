@@ -1,0 +1,146 @@
+[
+  {
+    "id": "lime-rock",
+    "name": "Lime Rock",
+    "laps": 30,
+    "image": "/images/tracks/lime-rock.png",
+    "tab": "Lime_Rock",
+    "link": "https://projectmotorracing.com/track.php?trackIndex=0"
+  },
+  {
+    "id": "zolder",
+    "name": "Zolder",
+    "laps": 21,
+    "image": "/images/tracks/zolder.png",
+    "tab": "Zolder",
+    "link": "https://projectmotorracing.com/track.php?trackIndex=3"
+  },
+  {
+    "id": "donington-park",
+    "name": "Donington Park",
+    "laps": 21,
+    "image": "/images/tracks/donnington-park.png",
+    "tab": "Donington_Park",
+    "link": "https://projectmotorracing.com/track.php?trackIndex=13"
+  },
+  {
+    "id": "mid-ohio",
+    "name": "Mid-Ohio",
+    "laps": 18,
+    "image": "/images/tracks/mid-ohio.png",
+    "tab": "Mid-Ohio",
+    "link": "https://projectmotorracing.com/track.php?trackIndex=16"
+  },
+  {
+    "id": "interlagos",
+    "name": "Interlagos",
+    "laps": 17,
+    "image": "/images/tracks/interlagos.png",
+    "tab": "Interlagos",
+    "link": "https://projectmotorracing.com/track.php?trackIndex=17"
+  },
+  {
+    "id": "red-bull-ring",
+    "name": "Red Bull Ring",
+    "laps": 19,
+    "image": "/images/tracks/redbull-ring.png",
+    "tab": "Red_Bull_Ring",
+    "link": "https://projectmotorracing.com/track.php?trackIndex=14"
+  },
+  {
+    "id": "mosport",
+    "name": "Mosport",
+    "laps": 19,
+    "image": "/images/tracks/mosport.png",
+    "tab": "Mosport",
+    "link": "https://projectmotorracing.com/track.php?trackIndex=1"
+  },
+  {
+    "id": "kyalami",
+    "name": "Kyalami",
+    "laps": 17,
+    "image": "/images/tracks/Kyalami.png",
+    "tab": "Kyalami",
+    "link": "https://projectmotorracing.com/track.php?trackIndex=2"
+  },
+  {
+    "id": "imola",
+    "name": "Imola",
+    "laps": 16,
+    "image": "/images/tracks/imola.png",
+    "tab": "Imola",
+    "link": "https://projectmotorracing.com/track.php?trackIndex=12"
+  },
+  {
+    "id": "silverstone",
+    "name": "Silverstone",
+    "laps": 14,
+    "image": "/images/tracks/silverstone.png",
+    "tab": "Silverstone",
+    "link": "https://projectmotorracing.com/track.php?trackIndex=9"
+  },
+  {
+    "id": "sebring",
+    "name": "Sebring",
+    "laps": 14,
+    "image": "/images/tracks/sebring.png",
+    "tab": "Sebring",
+    "link": "https://projectmotorracing.com/track.php?trackIndex=10"
+  },
+  {
+    "id": "daytona-road",
+    "name": "Daytona Road",
+    "laps": 15,
+    "image": "/images/tracks/Daytona-Road.png",
+    "tab": "Daytona_Road",
+    "link": "https://projectmotorracing.com/track.php?trackIndex=11"
+  },
+  {
+    "id": "monza",
+    "name": "Monza",
+    "laps": 15,
+    "image": "/images/tracks/monza.png",
+    "tab": "Monza",
+    "link": "https://projectmotorracing.com/track.php?trackIndex=15"
+  },
+  {
+    "id": "n-rburgring-gp",
+    "name": "Nürburgring GP",
+    "laps": 14,
+    "image": "/images/tracks/Nürburgring-GP.png",
+    "tab": "Nürburgring_GP",
+    "link": "https://projectmotorracing.com/track.php?trackIndex=7"
+  },
+  {
+    "id": "spa",
+    "name": "Spa",
+    "laps": 12,
+    "image": "/images/tracks/spa.png",
+    "tab": "Spa",
+    "link": "https://projectmotorracing.com/track.php?trackIndex=4"
+  },
+  {
+    "id": "bathurst",
+    "name": "Bathurst",
+    "laps": 12,
+    "image": "/images/tracks/bathurst.png",
+    "tab": "Bathurst",
+    "link": "https://projectmotorracing.com/track.php?trackIndex=8"
+  },
+  {
+    "id": "takimiya",
+    "name": "Takimiya",
+    "laps": 17,
+    "image": "/images/tracks/Takimiya.png",
+    "tab": "Takimiya",
+    "link": "https://projectmotorracing.com/track.php?trackIndex=18"
+  },
+  {
+    "id": "nordschleife",
+    "name": "Nordschleife",
+    "laps": 4,
+    "image": "/images/tracks/Nordschleife.png",
+    "tab": "Nordschleife",
+    "link": "https://projectmotorracing.com/track.php?trackIndex=5"
+  }
+]

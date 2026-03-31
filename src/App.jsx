@@ -68,7 +68,9 @@ function HomePage({ standings, tracks, drivers, news, calendar }) {
             <article>
               <p>{news[0].date || "-"}</p>
               <h3>{news[0].headline || "Untitled"}</h3>
-              <p style={{ whiteSpace: "pre-line" }}>{news[0].body || ""}</p>
+              <p className="news-preview-body" style={{ whiteSpace: "pre-line" }}>
+                {news[0].body || ""}
+              </p>
             </article>
           ) : (
             <p>No news yet</p>

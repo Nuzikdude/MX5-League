@@ -309,12 +309,68 @@ def build_export(workbook_path: Path, data_dir: Path):
         entry["rank"] = i
 
     data_dir.mkdir(parents=True, exist_ok=True)
+
+    # -------------------------
+    # NEWS EXPORT
+    # -------------------------
+    news = []
+
+    if "News" in wb.sheetnames:
+        news_ws = wb["News"]
+
+        for row in (1, 13, 25, 37, 49, 61, 73, 85):
+            raw_date = news_ws[f"B{row}"].value
+            headline = clean_str(news_ws[f"B{row + 1}"].value)
+            body = clean_str(news_ws[f"A{row + 2}"].value)
+
+            if not headline and not body:
+                continue
+
+            if hasattr(raw_date, "strftime"):
+                date = raw_date.strftime("%d %B %Y")
+            else:
+                date = clean_str(raw_date)
+
+            news.append(
+                {
+                    "date": date,
+                    "headline": headline,
+                    "body": body,
+                }
+            )
+
+    save_json(data_dir / "news.json", news)
+
+    # -------------------------
+    # CALENDAR EXPORT
+    # -------------------------
+    calendar = []
+
+    for row in range(13, 32):
+        track = clean_str(overview[f"A{row}"].value)
+        laps = clean_int(overview[f"B{row}"].value)
+        date = clean_str(overview[f"D{row}"].value)
+        time = clean_str(overview[f"E{row}"].value)
+
+        if not track or track.lower() == "track":
+            continue
+
+        calendar.append(
+            {
+                "track": track,
+                "laps": laps,
+                "date": date,
+                "time": time,
+            }
+        )
+
     save_json(data_dir / "league.json", league)
     save_json(data_dir / "drivers.json", drivers)
     save_json(data_dir / "driver-pages.json", driver_pages)
     save_json(data_dir / "tracks.json", tracks)
     save_json(data_dir / "track-pages.json", track_pages)
     save_json(data_dir / "standings.json", standings)
+    save_json(data_dir / "calendar.json", calendar)
 
     print("Export complete.")
     print(f"Wrote: {data_dir / 'league.json'}")
@@ -323,6 +379,8 @@ def build_export(workbook_path: Path, data_dir: Path):
     print(f"Wrote: {data_dir / 'tracks.json'}")
     print(f"Wrote: {data_dir / 'track-pages.json'}")
     print(f"Wrote: {data_dir / 'standings.json'}")
+    print(f"Wrote: {data_dir / 'news.json'}")
+    print(f"Wrote: {data_dir / 'calendar.json'}")
 
 
 if __name__ == "__main__":

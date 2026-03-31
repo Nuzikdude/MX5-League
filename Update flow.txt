@@ -1,0 +1,9 @@
+Update flow
+Open your Excel file
+Enter the new race info
+Run:
+python export_mx5_json.py "C:\Users\nuzik\Documents\mx5-league-site\MX5_League_fixed.xlsm" "C:\Users\nuzik\Documents\mx5-league-site\public\data"
+Then run:
+git add .
+git commit -m "Update league results"
+git push

@@ -32,18 +32,20 @@ function Layout({ league, children }) {
           <p>Championship dashboard, standings, drivers, and tracks.</p>
         </div>
         <nav className="nav">
-          <Link to="/">Home</Link>
-          <Link to="/standings">Standings</Link>
-          <Link to="/drivers">Drivers</Link>
-          <Link to="/tracks">Tracks</Link>
-        </nav>
+        <Link to="/">Home</Link>
+         <Link to="/standings">Standings</Link>
+         <Link to="/drivers">Drivers</Link>
+         <Link to="/tracks">Tracks</Link>
+         <Link to="/news">News</Link>
+        <Link to="/calendar">Calendar</Link>
+    </nav>
       </header>
       {children}
     </div>
   );
 }
 
-function HomePage({ standings, tracks, drivers }) {
+function HomePage({ standings, tracks, drivers, news, calendar }) {
   const topDriver = standings[0];
 
   const totalPoints = useMemo(() => {
@@ -52,6 +54,69 @@ function HomePage({ standings, tracks, drivers }) {
 
   return (
     <>
+      {/* 🔥 NEWS + NEXT EVENT */}
+      <div className="grid">
+        <section className="card">
+          <div className="section-head">
+            <h2 className="section-title">Latest News</h2>
+            <Link className="text-link" to="/news">
+              View all
+            </Link>
+          </div>
+
+          {news?.length > 0 ? (
+            <article>
+              <p>{news[0].date || "-"}</p>
+              <h3>{news[0].headline || "Untitled"}</h3>
+              <p style={{ whiteSpace: "pre-line" }}>{news[0].body || ""}</p>
+            </article>
+          ) : (
+            <p>No news yet</p>
+          )}
+        </section>
+
+        <aside className="card">
+          <h2 className="section-title">Upcoming Races</h2>
+
+          {calendar?.length > 0 ? (
+            <div className="calendar-preview">
+              {calendar.slice(0, 2).map((race, index) => {
+                const linkedTrack = tracks.find(
+                  (t) =>
+                    (t.name || t.track || "").toLowerCase() ===
+                    (race.track || "").toLowerCase()
+                );
+
+                return (
+                  <Link
+                    key={`${race.track}-${race.date}-${race.time}-${index}`}
+                    className="calendar-race-card"
+                    to={trackHref(linkedTrack || race)}
+                  >
+                    <div className="calendar-race-copy">
+                      <h3>{race.track}</h3>
+                      <p><strong>Time:</strong> {race.time}</p>
+                      <p><strong>Date:</strong> {race.date}</p>
+                      <p><strong>Laps:</strong> {race.laps}</p>
+                    </div>
+
+                    {linkedTrack?.image ? (
+                      <img
+                        src={linkedTrack.image}
+                        alt={race.track}
+                        className="calendar-race-image"
+                      />
+                    ) : null}
+                  </Link>
+                );
+              })}
+            </div>
+          ) : (
+            <p>No races scheduled</p>
+          )}
+        </aside>
+      </div>
+
       <div className="grid">
         <section className="card">
           <h2 className="section-title">Standings</h2>
@@ -313,6 +378,68 @@ function TracksPage({ tracks }) {
   );
 }
 
+function NewsPage({ news }) {
+  return (
+    <section className="card">
+      <h2 className="section-title">News</h2>
+      <div className="news-list">
+        {news?.length ? (
+          news.map((item, index) => (
+            <article key={index} className="mini-card">
+              <p>{item.date || "-"}</p>
+              <h3>{item.headline || "Untitled"}</h3>
+              <p>{item.body || ""}</p>
+            </article>
+          ))
+        ) : (
+          <p>No news yet.</p>
+        )}
+      </div>
+    </section>
+  );
+}
+
+function CalendarPage({ calendar }) {
+  return (
+    <section className="card">
+      <div className="section-head">
+        <h2 className="section-title">Calendar</h2>
+      </div>
+
+      {calendar?.length ? (
+        <table className="table">
+          <thead>
+            <tr>
+              <th>Track</th>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Laps</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            {calendar.map((race, index) => (
+              <tr key={`${race.track}-${race.date}-${race.time}-${index}`}>
+                <td>{race.track}</td>
+                <td>{race.date}</td>
+                <td>{race.time}</td>
+                <td>{race.laps ?? "-"}</td>
+                <td>
+                  <Link className="text-link" to={trackHref(race)}>
+                    Track page
+                  </Link>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      ) : (
+        <p>No calendar entries yet.</p>
+      )}
+    </section>
+  );
+}
+
 function TrackPage({ trackPages, drivers }) {
   const { id } = useParams();
   const track = trackPages.find((t) => t.id === id);
@@ -390,6 +517,8 @@ function App() {
   const [driverPages, setDriverPages] = useState([]);
   const [trackPages, setTrackPages] = useState([]);
   const [league, setLeague] = useState(null);
+  const [news, setNews] = useState([]);
+  const [calendar, setCalendar] = useState([]);
 
   const standings = useMemo(() => {
     if (!trackPages.length) return [];
@@ -453,12 +582,16 @@ function App() {
       fetch("/data/driver-pages.json").then((res) => res.json()),
       fetch("/data/track-pages.json").then((res) => res.json()),
       fetch("/data/league.json").then((res) => res.json()),
-    ]).then(([tracksData, driversData, driverPagesData, trackPagesData, leagueData]) => {
+      fetch("/data/news.json").then((res) => res.json()),
+      fetch("/data/calendar.json").then((res) => res.json()),
+    ]).then(([tracksData, driversData, driverPagesData, trackPagesData, leagueData, newsData, calendarData]) => {
       setTracks(tracksData);
       setDrivers(driversData);
       setDriverPages(driverPagesData);
       setTrackPages(trackPagesData);
       setLeague(leagueData);
+      setNews(newsData);
+      setCalendar(calendarData);
     });
   }, []);
 
@@ -466,9 +599,22 @@ function App() {
     <BrowserRouter>
       <Layout league={league}>
         <Routes>
-          <Route path="/" element={<HomePage standings={standings} tracks={tracks} drivers={drivers} />} />
+          <Route
+            path="/"
+            element={
+              <HomePage
+                standings={standings}
+                tracks={tracks}
+                drivers={drivers}
+                news={news}
+                calendar={calendar}
+              />
+            }
+          />
           <Route path="/standings" element={<StandingsPage standings={standings} drivers={drivers} />} />
           <Route path="/drivers" element={<DriversPage drivers={drivers} />} />
+          <Route path="/news" element={<NewsPage news={news} />} />
+          <Route path="/calendar" element={<CalendarPage calendar={calendar} />} />
           <Route
   path="/drivers/:id"
   element={<DriverPage driverPages={driverPages} standings={standings} />}

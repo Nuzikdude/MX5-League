@@ -120,36 +120,38 @@ function HomePage({ standings, tracks, drivers, news, calendar }) {
       <div className="grid">
         <section className="card">
           <h2 className="section-title">Standings</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>Rank</th>
-                <th>Driver</th>
-                <th>Points</th>
-                <th>Wins</th>
-                <th>Podiums</th>
-                <th>Fast Laps</th>
-                <th>Starts</th>
-              </tr>
-            </thead>
-            <tbody>
-              {standings.map((driver, index) => (
-                <tr key={index}>
-                  <td>{driver.rank}</td>
-                  <td>
-                    <Link className="name-link" to={driverHref(driver.driver, drivers)}>
-                      {driver.driver}
-                    </Link>
-                  </td>
-                  <td>{driver.points}</td>
-                  <td>{driver.wins}</td>
-                  <td>{driver.podiums}</td>
-                  <td>{driver.fastLaps}</td>
-                  <td>{driver.starts}</td>
+          <div className="table-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th>Rank</th>
+                  <th>Driver</th>
+                  <th>Points</th>
+                  <th>Wins</th>
+                  <th>Podiums</th>
+                  <th>Fast Laps</th>
+                  <th>Starts</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {standings.map((driver, index) => (
+                  <tr key={index}>
+                    <td>{driver.rank}</td>
+                    <td>
+                      <Link className="name-link" to={driverHref(driver.driver, drivers)}>
+                        {driver.driver}
+                      </Link>
+                    </td>
+                    <td>{driver.points}</td>
+                    <td>{driver.wins}</td>
+                    <td>{driver.podiums}</td>
+                    <td>{driver.fastLaps}</td>
+                    <td>{driver.starts}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </section>
 
         <aside className="card">

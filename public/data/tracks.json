@@ -128,12 +128,12 @@
     "link": "https://projectmotorracing.com/track.php?trackIndex=8"
   },
   {
-    "id": "takimiya",
-    "name": "Takimiya",
-    "laps": 17,
-    "image": "/images/tracks/Takimiya.png",
-    "tab": "Takimiya",
-    "link": "https://projectmotorracing.com/track.php?trackIndex=18"
+    "id": "spielberg-small",
+    "name": "Spielberg Small",
+    "laps": 30,
+    "image": "/images/tracks/spielberg-small.png",
+    "tab": "Spielberg Small",
+    "link": "https://projectmotorracing.com/track.php?trackIndex=14"
   },
   {
     "id": "nordschleife",

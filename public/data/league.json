@@ -2,36 +2,8 @@
   "name": "PMR MX-5 League",
   "rules": [
     {
-      "label": "Qualifying",
-      "value": "3 laps"
-    },
-    {
-      "label": "1st place",
-      "value": "10.0"
-    },
-    {
-      "label": "2nd place",
-      "value": "7.0"
-    },
-    {
-      "label": "3rd place",
-      "value": "5.0"
-    },
-    {
-      "label": "4th place",
-      "value": "3.0"
-    },
-    {
-      "label": "5th place",
-      "value": "2.0"
-    },
-    {
-      "label": "6th place",
-      "value": "1.0"
-    },
-    {
-      "label": "Fastest lap bonus",
-      "value": "2.0"
+      "label": "Rules",
+      "value": "🏁 PMR MX-5 League: Official Rules & Regulations 🏁\nThe primary focus of this league is developing strong, clean racecraft. Because MX-5 racing relies heavily on carrying momentum, smooth and fair driving will always yield the best results. Please review the rules and lobby settings below before heading out on track.\n\n1. Overtaking & Defending\nThe Burden of Passing: The onus is always on the overtaking driver to execute a safe pass.\n\nDefensive Moves: The car in front is entitled to defend their position, but they may not make erratic or multiple defensive moves to block an attacking car.\n\nEarning the Corner: If an attacking car has a significant portion of their vehicle alongside (roughly level with the defending driver's shoulder) before the turn-in point, they have earned the right to the corner.\n\nLeaving Space: When a car has earned the corner, the defending driver must leave \"racing room\" (at least one car's width) at the apex.\n\n2. Steward Guidelines & Incidents\nThe Racing Line is Not Protected: Sticking blindly to the optimal racing line is not an excuse for causing a collision. If you force a driver off the track who has legitimately established an inside position, you will be penalized by the Stewards.\n\nNo Moving Under Braking: Altering your line in the braking zone to block a trailing car is strictly prohibited and will result in a penalty.\n\nContact & \"Rubbing\": Stewards understand that in close-quarters, momentum-based MX-5 racing, minor rubbing can happen. However, dangerous, careless, or intentional contact will not be tolerated under any circumstances.\n\nSafe Re-entry: If you run off the track, you must yield to oncoming traffic. You may only rejoin the racing surface when it is absolutely safe to do so. Unsafe re-entries that cause collisions will be heavily penalized.\n\n3. Official Lobby Settings\nDamage: ON\n\nIn-Game Penalties: ON\n\nAssists: AUTHENTIC\n\nTrack Temperature: AVERAGE (set to help preserve tyre life and promote closer racing)."
     }
   ]
 }

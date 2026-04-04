@@ -38,6 +38,7 @@ function Layout({ league, children }) {
          <Link to="/tracks">Tracks</Link>
          <Link to="/news">News</Link>
         <Link to="/calendar">Calendar</Link>
+        <Link to="/rules">Rules</Link>
     </nav>
       </header>
       {children}

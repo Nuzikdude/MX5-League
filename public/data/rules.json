@@ -1,0 +1,2 @@
+save_json(data_dir / "rules.json", rules)
+print("Wrote:", data_dir / "rules.json")

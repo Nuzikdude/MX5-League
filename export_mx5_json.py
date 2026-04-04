@@ -65,12 +65,25 @@ def build_export(workbook_path: Path, data_dir: Path):
 
     league_name = clean_str(overview["A1"].value) or "MX5 League"
 
+    # -------------------------
+    # RULES EXPORT
+    # -------------------------
     rules = []
-    for row in range(4, 12):
-        label = clean_str(overview[f"A{row}"].value)
-        value = clean_str(overview[f"B{row}"].value)
-        if label or value:
-            rules.append({"label": label, "value": value})
+    if "Rules" in wb.sheetnames:
+        rules_ws = wb["Rules"]
+        for row in rules_ws.iter_rows(min_row=1, max_col=2, values_only=True):
+            label, value = row
+            label = clean_str(label)
+            value = clean_str(value)
+            if label or value:
+                rules.append({"label": label, "value": value})
+    else:
+        # fallback to overview
+        for row in range(4, 12):
+            label = clean_str(overview[f"A{row}"].value)
+            value = clean_str(overview[f"B{row}"].value)
+            if label or value:
+                rules.append({"label": label, "value": value})
 
     league = {
         "name": league_name,
@@ -341,6 +354,7 @@ def build_export(workbook_path: Path, data_dir: Path):
 
     save_json(data_dir / "news.json", news)
 
+    
     # -------------------------
     # CALENDAR EXPORT
     # -------------------------

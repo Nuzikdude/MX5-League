@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, Link, useParams } from "react-router-dom";
 import { useEffect, useMemo, useState } from "react";
 import "./index.css";
+import RulesPage from './pages/RulesPage'; // (Make sure the path matches where your file is)
 
 
 function slugify(value) {
@@ -629,6 +630,7 @@ function App() {
             path="/tracks/:id"
             element={<TrackPage trackPages={trackPages} drivers={drivers} />}
           />
+          <Route path="/rules" element={<RulesPage />} />
         </Routes>
       </Layout>
     </BrowserRouter>

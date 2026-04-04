@@ -352,8 +352,6 @@ def build_export(workbook_path: Path, data_dir: Path):
                 }
             )
 
-    save_json(data_dir / "news.json", news)
-
     
     # -------------------------
     # CALENDAR EXPORT
@@ -378,13 +376,18 @@ def build_export(workbook_path: Path, data_dir: Path):
             }
         )
 
+    # -------------------------
+    # FINAL SAVES
+    # -------------------------
     save_json(data_dir / "league.json", league)
     save_json(data_dir / "drivers.json", drivers)
     save_json(data_dir / "driver-pages.json", driver_pages)
     save_json(data_dir / "tracks.json", tracks)
     save_json(data_dir / "track-pages.json", track_pages)
     save_json(data_dir / "standings.json", standings)
+    save_json(data_dir / "news.json", news)
     save_json(data_dir / "calendar.json", calendar)
+    save_json(data_dir / "rules.json", rules) # <-- This generates the rules.json file
 
     print("Export complete.")
     print(f"Wrote: {data_dir / 'league.json'}")
@@ -395,6 +398,7 @@ def build_export(workbook_path: Path, data_dir: Path):
     print(f"Wrote: {data_dir / 'standings.json'}")
     print(f"Wrote: {data_dir / 'news.json'}")
     print(f"Wrote: {data_dir / 'calendar.json'}")
+    print(f"Wrote: {data_dir / 'rules.json'}")
 
 
 if __name__ == "__main__":

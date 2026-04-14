@@ -55,18 +55,26 @@ function HomePage({ standings, tracks, drivers, news, calendar }) {
     return standings.reduce((sum, d) => sum + (Number(d.points) || 0), 0);
   }, [standings]);
 
+  // Logic to get exactly the next two incomplete races
+  const upcomingRaces = useMemo(() => {
+    if (!calendar) return [];
+    return calendar
+      .filter((race) => {
+        // Ensure we handle both actual booleans and "true"/"false" strings from JSON
+        const isDone = race.completed === true || race.completed === "true";
+        return !isDone;
+      })
+      .slice(0, 2);
+  }, [calendar]);
+
   return (
     <>
-      {/* 🔥 NEWS + NEXT EVENT */}
       <div className="grid">
         <section className="card">
           <div className="section-head">
             <h2 className="section-title">Latest News</h2>
-            <Link className="text-link" to="/news">
-              View all
-            </Link>
+            <Link className="text-link" to="/news">View all</Link>
           </div>
-
           {news?.length > 0 ? (
             <article>
               <p>{news[0].date || "-"}</p>
@@ -82,44 +90,44 @@ function HomePage({ standings, tracks, drivers, news, calendar }) {
 
         <aside className="card">
           <h2 className="section-title">Upcoming Races</h2>
-
-          {calendar?.length > 0 ? (
+          {upcomingRaces.length > 0 ? (
             <div className="calendar-preview">
-              {calendar
-                .filter((race) => !race.completed)
-                .slice(0, 2)
-                .map((race, index) => {
-                  const linkedTrack = tracks.find(
-                    (t) =>
-                      (t.name || t.track || "").toLowerCase() ===
-                      (race.track || "").toLowerCase()
-                  );
+              {upcomingRaces.map((race, index) => {
+                const linkedTrack = tracks.find(
+                  (t) =>
+                    (t.name || t.track || "").toLowerCase() ===
+                    (race.track || "").toLowerCase()
+                );
 
-                  return (
-                    <Link
-                      key={`${race.track}-${race.date}-${race.time}-${index}`}
-                      className="calendar-race-card"
-                      to={trackHref(linkedTrack || race)}
-                    >
-                      <div className="calendar-race-copy">
-                        <h3>{race.track}</h3>
-                        <p><strong>Time:</strong> {race.time}</p>
-                        <p><strong>Date:</strong> {race.date}</p>
-                        <p><strong>Laps:</strong> {race.laps}</p>
-                      </div>
+                return (
+                  <Link
+                    key={`${race.track}-${index}`}
+                    className="calendar-race-card"
+                    to={trackHref(linkedTrack || race)}
+                  >
+                    <div className="calendar-race-copy">
+                      <h3>{race.track}</h3>
+                      <p><strong>Time:</strong> {race.time}</p>
+                      <p><strong>Date:</strong> {race.date}</p>
+                      <p><strong>Laps:</strong> {race.laps}</p>
+                    </div>
 
-                      {linkedTrack?.image ? (
-                        <img
-                          src={linkedTrack.image}
-                          alt={race.track}
-                          className="calendar-race-image"
-                        />
-                      ) : null}
-                    </Link>
-                  );
-                })}
+                    {linkedTrack?.image ? (
+                      <img
+                        src={linkedTrack.image}
+                        alt={race.track}
+                        className="calendar-race-image"
+                      />
+                    ) : (
+                      <div className="calendar-race-image-placeholder" />
+                    )}
+                  </Link>
+                );
+              })}
             </div>
-          ) : null}
+          ) : (
+            <p>Season Complete!</p>
+          )}
         </aside>
       </div>
 

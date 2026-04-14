@@ -4,6 +4,7 @@ import "./index.css";
 import RulesPage from './pages/RulesPage'; // (Make sure the path matches where your file is)
 
 
+
 function slugify(value) {
   return String(value || "")
     .toLowerCase()
@@ -84,40 +85,41 @@ function HomePage({ standings, tracks, drivers, news, calendar }) {
 
           {calendar?.length > 0 ? (
             <div className="calendar-preview">
-              {calendar.slice(0, 2).map((race, index) => {
-                const linkedTrack = tracks.find(
-                  (t) =>
-                    (t.name || t.track || "").toLowerCase() ===
-                    (race.track || "").toLowerCase()
-                );
+              {calendar
+                .filter((race) => !race.completed)
+                .slice(0, 2)
+                .map((race, index) => {
+                  const linkedTrack = tracks.find(
+                    (t) =>
+                      (t.name || t.track || "").toLowerCase() ===
+                      (race.track || "").toLowerCase()
+                  );
 
-                return (
-                  <Link
-                    key={`${race.track}-${race.date}-${race.time}-${index}`}
-                    className="calendar-race-card"
-                    to={trackHref(linkedTrack || race)}
-                  >
-                    <div className="calendar-race-copy">
-                      <h3>{race.track}</h3>
-                      <p><strong>Time:</strong> {race.time}</p>
-                      <p><strong>Date:</strong> {race.date}</p>
-                      <p><strong>Laps:</strong> {race.laps}</p>
-                    </div>
+                  return (
+                    <Link
+                      key={`${race.track}-${race.date}-${race.time}-${index}`}
+                      className="calendar-race-card"
+                      to={trackHref(linkedTrack || race)}
+                    >
+                      <div className="calendar-race-copy">
+                        <h3>{race.track}</h3>
+                        <p><strong>Time:</strong> {race.time}</p>
+                        <p><strong>Date:</strong> {race.date}</p>
+                        <p><strong>Laps:</strong> {race.laps}</p>
+                      </div>
 
-                    {linkedTrack?.image ? (
-                      <img
-                        src={linkedTrack.image}
-                        alt={race.track}
-                        className="calendar-race-image"
-                      />
-                    ) : null}
-                  </Link>
-                );
-              })}
+                      {linkedTrack?.image ? (
+                        <img
+                          src={linkedTrack.image}
+                          alt={race.track}
+                          className="calendar-race-image"
+                        />
+                      ) : null}
+                    </Link>
+                  );
+                })}
             </div>
-          ) : (
-            <p>No races scheduled</p>
-          )}
+          ) : null}
         </aside>
       </div>
 

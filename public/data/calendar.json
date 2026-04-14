@@ -3,108 +3,126 @@
     "track": "Lime Rock",
     "laps": 30,
     "date": "13th April 2026",
-    "time": "21:00:00"
+    "time": "21:00:00",
+    "completed": true
   },
   {
     "track": "Zolder",
     "laps": 21,
     "date": "13th April 2026",
-    "time": "22:10:00"
+    "time": "22:10:00",
+    "completed": true
   },
   {
     "track": "Donington Park",
     "laps": 21,
     "date": "27th April 2026",
-    "time": "21:00:00"
+    "time": "21:00:00",
+    "completed": false
   },
   {
     "track": "Mid-Ohio",
     "laps": 18,
     "date": "27th April 2026",
-    "time": "22:10:00"
+    "time": "22:10:00",
+    "completed": false
   },
   {
     "track": "Interlagos",
     "laps": 17,
     "date": "11th May 2026",
-    "time": "21:00:00"
+    "time": "21:00:00",
+    "completed": false
   },
   {
     "track": "Red Bull Ring",
     "laps": 19,
     "date": "11th May 2026",
-    "time": "22:10:00"
+    "time": "22:10:00",
+    "completed": false
   },
   {
     "track": "Mosport",
     "laps": 19,
     "date": "25th May 2026",
-    "time": "21:00:00"
+    "time": "21:00:00",
+    "completed": false
   },
   {
     "track": "Kyalami",
     "laps": 17,
     "date": "25th May 2026",
-    "time": "22:10:00"
+    "time": "22:10:00",
+    "completed": false
   },
   {
     "track": "Imola",
     "laps": 16,
     "date": "8th June 2026",
-    "time": "21:00:00"
+    "time": "21:00:00",
+    "completed": false
   },
   {
     "track": "Silverstone",
     "laps": 14,
     "date": "8th June 2026",
-    "time": "22:10:00"
+    "time": "22:10:00",
+    "completed": false
   },
   {
     "track": "Sebring",
     "laps": 14,
     "date": "22nd June 2026",
-    "time": "21:00:00"
+    "time": "21:00:00",
+    "completed": false
   },
   {
     "track": "Daytona Road",
     "laps": 15,
     "date": "22nd June 2026",
-    "time": "22:10:00"
+    "time": "22:10:00",
+    "completed": false
   },
   {
     "track": "Monza",
     "laps": 15,
     "date": "6th July 2026",
-    "time": "21:00:00"
+    "time": "21:00:00",
+    "completed": false
   },
   {
     "track": "Nürburgring GP",
     "laps": 14,
     "date": "6th July 2026",
-    "time": "22:10:00"
+    "time": "22:10:00",
+    "completed": false
   },
   {
     "track": "Spa",
     "laps": 12,
     "date": "20th July 2026",
-    "time": "21:00:00"
+    "time": "21:00:00",
+    "completed": false
   },
   {
     "track": "Bathurst",
     "laps": 12,
     "date": "20th July 2026",
-    "time": "22:10:00"
+    "time": "22:10:00",
+    "completed": false
   },
   {
     "track": "Spielberg Small",
     "laps": 30,
     "date": "3rd August 2026",
-    "time": "21:00:00"
+    "time": "21:00:00",
+    "completed": false
   },
   {
     "track": "Nordschleife",
     "laps": 4,
     "date": "3rd August 2026",
-    "time": "22:10:00"
+    "time": "22:10:00",
+    "completed": false
   }
 ]

@@ -78,7 +78,6 @@ def build_export(workbook_path: Path, data_dir: Path):
             if label or value:
                 rules.append({"label": label, "value": value})
     else:
-        # fallback to overview
         for row in range(4, 12):
             label = clean_str(overview[f"A{row}"].value)
             value = clean_str(overview[f"B{row}"].value)
@@ -90,10 +89,12 @@ def build_export(workbook_path: Path, data_dir: Path):
         "rules": rules,
     }
 
+    # -------------------------
+    # DRIVERS
+    # -------------------------
     drivers = []
     driver_pages = []
 
-    # Driver slots from D4:E9
     for row in range(4, 10):
         tab = clean_str(overview[f"D{row}"].value)
         listed_name = clean_str(overview[f"E{row}"].value)
@@ -120,7 +121,7 @@ def build_export(workbook_path: Path, data_dir: Path):
         existing = existing_driver_by_tab.get(tab) or existing_driver_by_id.get(driver_id) or {}
         image = existing.get("image") or f"/images/drivers/driver{driver_idx}.jpg"
 
-        driver_obj = {
+        drivers.append({
             "id": driver_id,
             "tab": tab,
             "name": name,
@@ -128,13 +129,15 @@ def build_export(workbook_path: Path, data_dir: Path):
             "nickname": nickname,
             "age": age,
             "image": image,
-        }
-        drivers.append(driver_obj)
-        driver_pages.append(driver_obj.copy())
+        })
+
+        driver_pages.append(drivers[-1].copy())
 
     driver_names = [d["name"] for d in drivers]
 
-    # Tracks from A13:B31
+    # -------------------------
+    # TRACKS
+    # -------------------------
     tracks = []
     track_pages = []
 
@@ -155,6 +158,7 @@ def build_export(workbook_path: Path, data_dir: Path):
 
         track_id = slugify(raw_track_name)
         existing_track = existing_track_by_id.get(track_id) or existing_track_by_name.get(raw_track_name) or {}
+
         image = existing_track.get("image") or f"/images/tracks/{track_id}.png"
         location = existing_track.get("location", "")
 
@@ -185,48 +189,31 @@ def build_export(workbook_path: Path, data_dir: Path):
                 if not driver_name and result_row - 4 < len(driver_names):
                     driver_name = driver_names[result_row - 4]
 
-                results.append(
-                    {
-                        "position": position if has_real_result else "",
-                        "driver": driver_name,
-                        "racePoints": race_points if race_points is not None else "",
-                        "fastestLap": fastest_raw in {"Y", "YES", "TRUE", "1", "🔥"},
-                        "totalPoints": total_points if total_points is not None else "",
-                        "lapTime": lap_time,
-                        "bestLapTime": lap_time,
-                        "completed": has_real_result,
-                    }
-                )
+                results.append({
+                    "position": position if has_real_result else "",
+                    "driver": driver_name,
+                    "racePoints": race_points if race_points is not None else "",
+                    "fastestLap": fastest_raw in {"Y", "YES", "TRUE", "1", "🔥"},
+                    "totalPoints": total_points if total_points is not None else "",
+                    "lapTime": lap_time,
+                    "bestLapTime": lap_time,
+                    "completed": has_real_result,
+                })
 
             track_name = page_name
         else:
             track_name = raw_track_name
             for driver_name in driver_names:
-                results.append(
-                    {
-                        "position": "",
-                        "driver": driver_name,
-                        "racePoints": "",
-                        "fastestLap": False,
-                        "totalPoints": "",
-                        "lapTime": "",
-                        "bestLapTime": "",
-                    }
-                )
-
-        if not results:
-            for driver_name in driver_names:
-                results.append(
-                    {
-                        "position": "",
-                        "driver": driver_name,
-                        "racePoints": "",
-                        "fastestLap": False,
-                        "totalPoints": "",
-                        "lapTime": "",
-                        "bestLapTime": "",
-                    }
-                )
+                results.append({
+                    "position": "",
+                    "driver": driver_name,
+                    "racePoints": "",
+                    "fastestLap": False,
+                    "totalPoints": "",
+                    "lapTime": "",
+                    "bestLapTime": "",
+                    "completed": False,
+                })
 
         track_summary = {
             "id": track_id,
@@ -247,7 +234,9 @@ def build_export(workbook_path: Path, data_dir: Path):
         tracks.append(track_summary)
         track_pages.append(track_page)
 
-    # Build standings from track pages
+    # -------------------------
+    # STANDINGS
+    # -------------------------
     standings_table: Dict[str, Dict[str, Any]] = {}
     finish_sums: Dict[str, int] = {}
     finish_counts: Dict[str, int] = {}
@@ -272,19 +261,6 @@ def build_export(workbook_path: Path, data_dir: Path):
             if not bool(r.get("completed")):
                 continue
 
-            standings_table.setdefault(
-                name,
-                {
-                    "driver": name,
-                    "points": 0,
-                    "wins": 0,
-                    "podiums": 0,
-                    "fastLaps": 0,
-                    "starts": 0,
-                    "avgFinish": "",
-                },
-            )
-
             pos = clean_int(r.get("position"))
             if pos is None or pos < 1 or pos > 6:
                 continue
@@ -305,6 +281,7 @@ def build_export(workbook_path: Path, data_dir: Path):
                 standings_table[name]["points"] += 2
 
     standings = list(standings_table.values())
+
     for entry in standings:
         name = entry["driver"]
         if finish_counts.get(name):
@@ -318,13 +295,12 @@ def build_export(workbook_path: Path, data_dir: Path):
             x.get("driver", ""),
         )
     )
+
     for i, entry in enumerate(standings, start=1):
         entry["rank"] = i
 
-    data_dir.mkdir(parents=True, exist_ok=True)
-
     # -------------------------
-    # NEWS EXPORT
+    # NEWS
     # -------------------------
     news = []
 
@@ -339,22 +315,16 @@ def build_export(workbook_path: Path, data_dir: Path):
             if not headline and not body:
                 continue
 
-            if hasattr(raw_date, "strftime"):
-                date = raw_date.strftime("%d %B %Y")
-            else:
-                date = clean_str(raw_date)
+            date = raw_date.strftime("%d %B %Y") if hasattr(raw_date, "strftime") else clean_str(raw_date)
 
-            news.append(
-                {
-                    "date": date,
-                    "headline": headline,
-                    "body": body,
-                }
-            )
+            news.append({
+                "date": date,
+                "headline": headline,
+                "body": body,
+            })
 
-    
     # -------------------------
-    # CALENDAR EXPORT
+    # CALENDAR (FIXED COMPLETED SUPPORT)
     # -------------------------
     calendar = []
 
@@ -363,22 +333,38 @@ def build_export(workbook_path: Path, data_dir: Path):
         laps = clean_int(overview[f"B{row}"].value)
         date = clean_str(overview[f"D{row}"].value)
         time = clean_str(overview[f"E{row}"].value)
+        
+        # Get the raw value from Column C (Completed column)
+        completed_raw = str(overview[f"C{row}"].value or "").strip().lower()
 
         if not track or track.lower() == "track":
             continue
 
-        calendar.append(
-            {
-                "track": track,
-                "laps": laps,
-                "date": date,
-                "time": time,
-            }
-        )
+        # 1. Manual check: Add "x" or checkmark support
+        is_marked_completed = completed_raw in {"y", "yes", "true", "1", "x", "completed"}
+
+        # 2. Automatic check: See if this track already has processed results
+        track_id = slugify(track)
+        has_results = False
+        
+        # Look through the track_pages we built earlier to see if any results are 'completed'
+        track_info = next((tp for tp in track_pages if tp["id"] == track_id), None)
+        if track_info:
+            has_results = any(r.get("completed") for r in track_info.get("results", []))
+
+        calendar.append({
+            "track": track,
+            "laps": laps,
+            "date": date,
+            "time": time,
+            "completed": is_marked_completed or has_results, # True if either condition is met
+        })
 
     # -------------------------
-    # FINAL SAVES
+    # SAVE OUTPUTS
     # -------------------------
+    data_dir.mkdir(parents=True, exist_ok=True)
+
     save_json(data_dir / "league.json", league)
     save_json(data_dir / "drivers.json", drivers)
     save_json(data_dir / "driver-pages.json", driver_pages)
@@ -387,18 +373,9 @@ def build_export(workbook_path: Path, data_dir: Path):
     save_json(data_dir / "standings.json", standings)
     save_json(data_dir / "news.json", news)
     save_json(data_dir / "calendar.json", calendar)
-    save_json(data_dir / "rules.json", rules) # <-- This generates the rules.json file
+    save_json(data_dir / "rules.json", rules)
 
     print("Export complete.")
-    print(f"Wrote: {data_dir / 'league.json'}")
-    print(f"Wrote: {data_dir / 'drivers.json'}")
-    print(f"Wrote: {data_dir / 'driver-pages.json'}")
-    print(f"Wrote: {data_dir / 'tracks.json'}")
-    print(f"Wrote: {data_dir / 'track-pages.json'}")
-    print(f"Wrote: {data_dir / 'standings.json'}")
-    print(f"Wrote: {data_dir / 'news.json'}")
-    print(f"Wrote: {data_dir / 'calendar.json'}")
-    print(f"Wrote: {data_dir / 'rules.json'}")
 
 
 if __name__ == "__main__":

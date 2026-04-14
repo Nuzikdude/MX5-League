@@ -77,12 +77,13 @@ function HomePage({ standings, tracks, drivers, news, calendar }) {
           </div>
           {news?.length > 0 ? (
             <article>
-              <p>{news[0].date || "-"}</p>
-              <h3>{news[0].headline || "Untitled"}</h3>
-              <p className="news-preview-body" style={{ whiteSpace: "pre-line" }}>
-                {news[0].body || ""}
-              </p>
-            </article>
+  <p>{news[0].date || "-"}</p>
+  <h3>{news[0].headline || "Untitled"}</h3>
+  {/* Combine your preview class with the new news-body class */}
+  <p className="news-preview-body news-body">
+    {news[0].body || ""}
+  </p>
+</article>
           ) : (
             <p>No news yet</p>
           )}
@@ -401,10 +402,11 @@ function NewsPage({ news }) {
       <div className="news-list">
         {news?.length ? (
           news.map((item, index) => (
-            <article key={index} className="mini-card">
+            <article key={index} className="mini-card" style={{ marginBottom: "16px" }}>
               <p>{item.date || "-"}</p>
               <h3>{item.headline || "Untitled"}</h3>
-              <p>{item.body || ""}</p>
+              {/* Added the news-body class here */}
+              <p className="news-body">{item.body || ""}</p>
             </article>
           ))
         ) : (

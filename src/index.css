@@ -644,3 +644,9 @@ table {
     gap: 8px;
   }
 }
+
+.news-body {
+  white-space: pre-line;
+  line-height: 1.6;
+  margin-top: 10px; /* Adds space between headline and text */
+}

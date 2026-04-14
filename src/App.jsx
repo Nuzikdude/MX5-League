@@ -402,11 +402,18 @@ function NewsPage({ news }) {
       <div className="news-list">
         {news?.length ? (
           news.map((item, index) => (
-            <article key={index} className="mini-card" style={{ marginBottom: "16px" }}>
-              <p>{item.date || "-"}</p>
-              <h3>{item.headline || "Untitled"}</h3>
-              {/* Added the news-body class here */}
-              <p className="news-body">{item.body || ""}</p>
+            /* We use the mini-card style to keep it consistent with the rest of the app */
+            <article key={index} className="mini-card" style={{ marginBottom: "20px", padding: "20px" }}>
+              <p style={{ opacity: 0.7, fontSize: "0.85rem", marginBottom: "8px" }}>
+                {item.date || "-"}
+              </p>
+              <h3 style={{ fontSize: "1.4rem", marginBottom: "12px", color: "#fff" }}>
+                {item.headline || "Untitled"}
+              </h3>
+              {/* This 'news-body' class is what fixes your paragraph spacing */}
+              <p className="news-body">
+                {item.body || ""}
+              </p>
             </article>
           ))
         ) : (

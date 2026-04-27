@@ -25,6 +25,11 @@ python export_mx5_json.py "C:\Users\nuzik\Documents\mx5-league-site\MX5_League_f
 
 Then refresh the website.
 
+git add .
+git commit -m "update results from sheet"
+git push
+
+
 Important:
 - It keeps existing image paths from your current drivers.json and tracks.json when it can.
 - Track links are read from P1 on each track sheet.

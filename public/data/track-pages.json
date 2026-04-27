@@ -158,34 +158,34 @@
         "completed": true
       },
       {
-        "position": "",
+        "position": "2.0",
         "driver": "Ryan Drew",
         "racePoints": 7,
         "fastestLap": false,
         "totalPoints": 7,
-        "lapTime": "",
-        "bestLapTime": "",
-        "completed": false
+        "lapTime": "1:47.512",
+        "bestLapTime": "1:47.512",
+        "completed": true
       },
       {
-        "position": "",
+        "position": "3.0",
         "driver": "Ryan Ashworth",
         "racePoints": 5,
         "fastestLap": false,
         "totalPoints": 5,
-        "lapTime": "",
-        "bestLapTime": "",
-        "completed": false
+        "lapTime": "1.51.945",
+        "bestLapTime": "1.51.945",
+        "completed": true
       },
       {
-        "position": "",
+        "position": "4.0",
         "driver": "Neil Hinder",
         "racePoints": 3,
         "fastestLap": false,
         "totalPoints": 3,
-        "lapTime": "",
-        "bestLapTime": "",
-        "completed": false
+        "lapTime": "1.51.773",
+        "bestLapTime": "1.51.773",
+        "completed": true
       },
       {
         "position": "",
@@ -228,44 +228,44 @@
         "completed": true
       },
       {
-        "position": "",
+        "position": "2.0",
         "driver": "Ryan Drew",
         "racePoints": 7,
         "fastestLap": false,
         "totalPoints": 7,
-        "lapTime": "",
-        "bestLapTime": "",
-        "completed": false
+        "lapTime": "1:37.350",
+        "bestLapTime": "1:37.350",
+        "completed": true
       },
       {
-        "position": "",
+        "position": "3.0",
         "driver": "Dene Ashworth",
         "racePoints": 5,
         "fastestLap": false,
         "totalPoints": 5,
-        "lapTime": "",
-        "bestLapTime": "",
-        "completed": false
+        "lapTime": "1:39.667",
+        "bestLapTime": "1:39.667",
+        "completed": true
       },
       {
-        "position": "",
+        "position": "4.0",
         "driver": "Neil Hinder",
         "racePoints": 3,
         "fastestLap": false,
         "totalPoints": 3,
-        "lapTime": "",
-        "bestLapTime": "",
-        "completed": false
+        "lapTime": "1:43.250",
+        "bestLapTime": "1:43.250",
+        "completed": true
       },
       {
-        "position": "",
+        "position": "5.0",
         "driver": "Ryan Ashworth",
         "racePoints": 2,
         "fastestLap": false,
         "totalPoints": 2,
-        "lapTime": "",
-        "bestLapTime": "",
-        "completed": false
+        "lapTime": "1:41.506",
+        "bestLapTime": "1:41.506",
+        "completed": true
       },
       {
         "position": "",

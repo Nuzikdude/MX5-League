@@ -18,14 +18,14 @@
     "laps": 21,
     "date": "27th April 2026",
     "time": "21:00:00",
-    "completed": false
+    "completed": true
   },
   {
     "track": "Mid-Ohio",
     "laps": 18,
     "date": "27th April 2026",
     "time": "22:10:00",
-    "completed": false
+    "completed": true
   },
   {
     "track": "Interlagos",

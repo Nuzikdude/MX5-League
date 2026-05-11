@@ -32,14 +32,14 @@
     "laps": 17,
     "date": "11th May 2026",
     "time": "21:00:00",
-    "completed": false
+    "completed": true
   },
   {
     "track": "Red Bull Ring",
     "laps": 19,
     "date": "11th May 2026",
     "time": "22:10:00",
-    "completed": false
+    "completed": true
   },
   {
     "track": "Mosport",

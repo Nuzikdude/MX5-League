@@ -46,14 +46,14 @@
     "laps": 19,
     "date": "25th May 2026",
     "time": "21:00:00",
-    "completed": false
+    "completed": true
   },
   {
     "track": "Kyalami",
     "laps": 17,
     "date": "25th May 2026",
     "time": "22:10:00",
-    "completed": false
+    "completed": true
   },
   {
     "track": "Imola",

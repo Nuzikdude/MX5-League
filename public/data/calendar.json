@@ -60,28 +60,28 @@
     "laps": 16,
     "date": "8th June 2026",
     "time": "21:00:00",
-    "completed": false
+    "completed": true
   },
   {
     "track": "Silverstone",
     "laps": 14,
     "date": "8th June 2026",
     "time": "22:10:00",
-    "completed": false
+    "completed": true
   },
   {
     "track": "Sebring",
     "laps": 14,
     "date": "22nd June 2026",
     "time": "21:00:00",
-    "completed": false
+    "completed": true
   },
   {
     "track": "Daytona Road",
     "laps": 15,
     "date": "22nd June 2026",
     "time": "22:10:00",
-    "completed": false
+    "completed": true
   },
   {
     "track": "Monza",

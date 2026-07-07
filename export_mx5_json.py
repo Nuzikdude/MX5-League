@@ -300,7 +300,7 @@ def build_export(workbook_path: Path, data_dir: Path):
         entry["rank"] = i
 
     # -------------------------
-    # NEWS
+    # NEWS EXPORT
     # -------------------------
     news = []
 
@@ -310,25 +310,23 @@ def build_export(workbook_path: Path, data_dir: Path):
         for row in (1, 14, 26, 38, 50, 62, 74, 86):
             raw_date = news_ws[f"B{row}"].value
             headline = clean_str(news_ws[f"B{row + 1}"].value)
-            body = clean_str(news_ws[f"A{row + 2}"].value)
+
+            # New layout:
+            # A(row+2) = Image label
+            # B(row+2) = Image filename
+            # A(row+3) = Body
+
+            image = clean_str(news_ws[f"B{row + 2}"].value)
+            body = clean_str(news_ws[f"A{row + 3}"].value)
 
             if not headline and not body:
                 continue
 
-            # Try to find an image value in nearby columns (common placements: C/D/E)
-            image_raw = None
-            for col in ("C", "D", "E"):
-                for r in (row, row + 1, row + 2):
-                    val = news_ws[f"{col}{r}"].value
-                    if val is not None and str(val).strip():
-                        image_raw = val
-                        break
-                if image_raw:
-                    break
-
-            image = clean_str(image_raw)
-
-            date = raw_date.strftime("%d %B %Y") if hasattr(raw_date, "strftime") else clean_str(raw_date)
+            date = (
+                raw_date.strftime("%d %B %Y")
+                if hasattr(raw_date, "strftime")
+                else clean_str(raw_date)
+            )
 
             news.append({
                 "date": date,

@@ -307,7 +307,7 @@ def build_export(workbook_path: Path, data_dir: Path):
     if "News" in wb.sheetnames:
         news_ws = wb["News"]
 
-        for row in (1, 13, 25, 37, 49, 61, 73, 85):
+        for row in (1, 14, 26, 38, 50, 62, 74, 86):
             raw_date = news_ws[f"B{row}"].value
             headline = clean_str(news_ws[f"B{row + 1}"].value)
             body = clean_str(news_ws[f"A{row + 2}"].value)

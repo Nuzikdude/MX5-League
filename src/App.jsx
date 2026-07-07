@@ -430,6 +430,13 @@ function NewsPage({ news }) {
               <p className="news-body">
                 {item.body || ""}
               </p>
+              {item.image && (
+                <img
+                  src={item.image}
+                  alt={item.headline}
+                  className="news-full-image"
+                />
+              )}
             </article>
           ))
         ) : (

@@ -316,7 +316,8 @@ def build_export(workbook_path: Path, data_dir: Path):
             # B(row+2) = Image filename
             # A(row+3) = Body
 
-            image = clean_str(news_ws[f"B{row + 2}"].value)
+            image_name = clean_str(news_ws[f"B{row + 2}"].value)
+            image = f"/news/{image_name}" if image_name else ""
             body = clean_str(news_ws[f"A{row + 3}"].value)
 
             if not headline and not body:

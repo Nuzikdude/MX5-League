@@ -404,6 +404,13 @@ function NewsPage({ news }) {
           news.map((item, index) => (
             /* We use the mini-card style to keep it consistent with the rest of the app */
             <article key={index} className="mini-card" style={{ marginBottom: "20px", padding: "20px" }}>
+              {item.image && (
+                <img
+                  src={item.image}
+                  alt={item.headline}
+                  className="news-image"
+                />
+              )}
               <p style={{ opacity: 0.7, fontSize: "0.85rem", marginBottom: "8px" }}>
                 {item.date || "-"}
               </p>

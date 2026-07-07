@@ -315,11 +315,25 @@ def build_export(workbook_path: Path, data_dir: Path):
             if not headline and not body:
                 continue
 
+            # Try to find an image value in nearby columns (common placements: C/D/E)
+            image_raw = None
+            for col in ("C", "D", "E"):
+                for r in (row, row + 1, row + 2):
+                    val = news_ws[f"{col}{r}"].value
+                    if val is not None and str(val).strip():
+                        image_raw = val
+                        break
+                if image_raw:
+                    break
+
+            image = clean_str(image_raw)
+
             date = raw_date.strftime("%d %B %Y") if hasattr(raw_date, "strftime") else clean_str(raw_date)
 
             news.append({
                 "date": date,
                 "headline": headline,
+                "image": image,
                 "body": body,
             })
 

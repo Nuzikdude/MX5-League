@@ -88,14 +88,14 @@
     "laps": 15,
     "date": "6th July 2026",
     "time": "21:00:00",
-    "completed": false
+    "completed": true
   },
   {
     "track": "Nürburgring GP",
     "laps": 14,
     "date": "6th July 2026",
     "time": "22:10:00",
-    "completed": false
+    "completed": true
   },
   {
     "track": "Spa",

@@ -77,12 +77,21 @@ function HomePage({ standings, tracks, drivers, news, calendar }) {
           </div>
           {news?.length > 0 ? (
             <article>
+  {news[0].image && (
+    <img
+      src={news[0].image}
+      alt={news[0].headline}
+      className="news-preview-image"
+    />
+  )}
   <p>{news[0].date || "-"}</p>
   <h3>{news[0].headline || "Untitled"}</h3>
-  {/* Combine your preview class with the new news-body class */}
-  <p className="news-preview-body news-body">
-    {news[0].body || ""}
+  <p className="news-preview-body">
+    {(news[0].body || "").substring(0, 250)}...
   </p>
+  <Link className="text-link" to="/news">
+    Read full story →
+  </Link>
 </article>
           ) : (
             <p>No news yet</p>

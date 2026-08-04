@@ -109,7 +109,7 @@
     "laps": 12,
     "date": "20th July 2026",
     "time": "22:10:00",
-    "completed": false
+    "completed": true
   },
   {
     "track": "Spielberg Small",
